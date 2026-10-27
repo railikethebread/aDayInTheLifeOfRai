@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cy7qldrqqxfbl"]
+
+[ext_resource type="PackedScene" uid="uid://8svudowp53ek" path="res://blenderFiles/personRiggedAnims.glb" id="1_40lpu"]
+[ext_resource type="Script" uid="uid://btyvwau481ljp" path="res://scripts/player.gd" id="1_l40og"]
+[ext_resource type="Script" uid="uid://bwmjninnyksno" path="res://scripts/playerUI.gd" id="3_7y2mj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+radius = 1.0
+height = 6.75
+
+[node name="player" type="CharacterBody3D" unique_id=1897458893]
+script = ExtResource("1_l40og")
+
+[node name="personRiggedAnims" parent="." unique_id=920144077 instance=ExtResource("1_40lpu")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="personRiggedAnims/body" parent_id_path=PackedInt32Array(920144077, 892554199) index="1" unique_id=2023944806]
+bones/0/rotation = Quaternion(-0.0032604039, 0.9801973, 0.0047474, -0.19794016)
+bones/18/rotation = Quaternion(-0.013817412, -6.824969e-08, 4.7001802e-09, 0.9999046)
+
+[node name="Bone_036" parent="personRiggedAnims/body/Skeleton3D" index="0" unique_id=906634101]
+transform = Transform3D(0.4542462, -0.34389463, 0.82182527, -0.855654, 0.08841097, 0.50993997, -0.24802417, -0.93483686, -0.25409442, 0.011876048, 6.953915, 0.15899965)
+
+[node name="leftPupil" parent="personRiggedAnims/body/Skeleton3D/Bone_036" index="0" unique_id=1534835532]
+layers = 512
+
+[node name="Bone_037" parent="personRiggedAnims/body/Skeleton3D" index="1" unique_id=1906599616]
+transform = Transform3D(0.6493993, 0.30333197, 0.69733095, -0.746397, 0.078790635, 0.6608197, 0.1455046, -0.9496219, 0.27757296, 0.011876048, 6.953915, 0.15899965)
+
+[node name="rightPupil" parent="personRiggedAnims/body/Skeleton3D/Bone_037" index="0" unique_id=1225988928]
+layers = 512
+
+[node name="head" parent="personRiggedAnims/body/Skeleton3D" index="2" unique_id=540091836]
+layers = 512
+
+[node name="head_001" parent="personRiggedAnims/body/Skeleton3D" index="3" unique_id=564570224]
+layers = 512
+
+[node name="head_003" parent="personRiggedAnims/body/Skeleton3D" index="4" unique_id=218984411]
+layers = 512
+
+[node name="leftArmLower" parent="personRiggedAnims/body/Skeleton3D" index="5" unique_id=272638500]
+layers = 512
+
+[node name="leftArmUpper" parent="personRiggedAnims/body/Skeleton3D" index="6" unique_id=860107265]
+layers = 512
+
+[node name="leftLegLower" parent="personRiggedAnims/body/Skeleton3D" index="7" unique_id=140607837]
+layers = 512
+
+[node name="leftLegUpper" parent="personRiggedAnims/body/Skeleton3D" index="8" unique_id=238695159]
+layers = 512
+
+[node name="rightArmLower" parent="personRiggedAnims/body/Skeleton3D" index="9" unique_id=1692567044]
+layers = 512
+
+[node name="rightArmUpper" parent="personRiggedAnims/body/Skeleton3D" index="10" unique_id=1864774875]
+layers = 512
+
+[node name="rightLegLower" parent="personRiggedAnims/body/Skeleton3D" index="11" unique_id=2052624920]
+layers = 512
+
+[node name="rightLegUpper" parent="personRiggedAnims/body/Skeleton3D" index="12" unique_id=1993061359]
+layers = 512
+
+[node name="torso" parent="personRiggedAnims/body/Skeleton3D" index="13" unique_id=1477539599]
+layers = 512
+
+[node name="leftPupilLook" type="LookAtModifier3D" parent="personRiggedAnims/body/Skeleton3D" index="14" unique_id=275239272]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+target_node = NodePath("../Bone_036")
+
+[node name="rightPupilLook" type="LookAtModifier3D" parent="personRiggedAnims/body/Skeleton3D" index="15" unique_id=1283081471]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+target_node = NodePath("../Bone_037")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=451373385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.375, 0)
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1563386402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.792261, -0.03536582)
+cull_mask = 1048063
+current = true
+fov = 90.0
+
+[node name="ui" type="Control" parent="." unique_id=1089491143]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_7y2mj")
+
+[node name="painLevel" type="Label" parent="ui" unique_id=1920728248]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "PAIN: "
+
+[editable path="personRiggedAnims"]
