@@ -34,21 +34,25 @@ N/A
 
 ### In a sentence (or list of features), define a GOOD outcome for your final project. I.e., what WILL you accomplish no matter what?
 
-Some symptoms
+Some symptoms,
 1 Day (Just Classes)
 
 ### In a sentence (or list of features), define a BETTER outcome for your final project. I.e., what do you THINK you can accomplish before the final project's deadline?
 
-Most symptoms
+Most symptoms,
 3 Days (+Walking between classes)
 
 ### In a sentence (or list of features), define a BEST outcome for your final project. I.e., what do you HOPE to accomplish before the final project's deadline?
 
-All symptoms
+All symptoms,
 5 days (+General items that need managing (hunger,thirst) )
 
 ## In a paragraph or more, outline your next steps. What new skills will you need to acquire? What topics will you need to research? If working with one of two classmates, who will do what?
 
-3D Modeling
-3D Animation
+I already have some experience with game development in Godot 2D but have decided to make this project in 3D. Because of this I need to learn:
+- 3D Modeling
+- 3D Animation
+- 3D Map-Making
+- 3D Code / Interaction
+There is more that I will need to learn as I go, but these are the largest ones that I can know of prior to encountering them
 
