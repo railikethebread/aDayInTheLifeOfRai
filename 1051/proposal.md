@@ -54,5 +54,6 @@ I already have some experience with game development in Godot 2D but have decide
 - 3D Animation
 - 3D Map-Making
 - 3D Code / Interaction
+
 There is more that I will need to learn as I go, but these are the largest ones that I can know of prior to encountering them
 
